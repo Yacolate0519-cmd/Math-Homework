@@ -3,7 +3,15 @@
 int main() {
     int size;
     printf("Enter the size of array= ");
-    scanf("%d", &size);
+    
+    if(scanf("%d",&size) != 1){
+        printf("Input Error! Enter the number !");
+        return 1;
+    }else if(size <= 0){
+        printf("Enter the positive integer !");
+        return 1;
+    }
+   
     int arr[size][size];
     int count = 1;
 
